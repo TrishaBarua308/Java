@@ -1,0 +1,8 @@
+package First;
+
+public class World {
+	public static void main(String[] args) {
+        System.out.println("Trisha");
+        System.out.print(1016);
+    }
+}
