@@ -1,0 +1,14 @@
+package First;
+
+public class product {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("ID = 101");
+		System.out.println("Title = iphone");
+		System.out.println("Price = 1895 euros");
+		System.out.println("Description = perfect product with best image quality");
+		System.out.println("Catagory = phone");
+	}
+
+}
