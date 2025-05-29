@@ -1,0 +1,14 @@
+package First;
+import java.util.Scanner;
+public class user_input
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		int n;
+		System.out.print("Input any number = ");
+		n = input.nextInt();
+		System.out.println("Number = "+n);
+		
+	}
+}
