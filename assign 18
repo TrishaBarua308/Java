@@ -1,0 +1,17 @@
+package First;
+import java.util.Scanner; 
+public class Assign18 {
+
+	public static void main(String[] args)
+	{
+		//String[] weeks = new String[7];  declare & creation both
+		String[] weeks = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+		Scanner input = new Scanner(System.in);
+		int n;
+		System.out.print("Input n = ");
+		n = input.nextInt();
+		System.out.println(weeks[n-1]);
+			
+	}
+
+}
