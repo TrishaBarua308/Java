@@ -1,0 +1,38 @@
+package First;
+import java.util.Scanner;
+public class matrix {
+
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Input row : ");
+		int r,c;
+		r = input.nextInt();
+		
+		System.out.print("Input col : ");
+		c = input.nextInt();
+		
+		int[][] a = new int[r][c];
+		
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				a[i][j] = input.nextInt();
+			}
+		}
+		
+		//output
+		System.out.println("Matrix");
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				System.out.print(" "+a[i][j]);
+			}
+			System.out.println();
+		}
+		
+	}
+}
