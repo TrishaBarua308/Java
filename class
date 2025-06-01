@@ -1,0 +1,21 @@
+package First;
+import java.util.Scanner;
+public class Test {
+
+	public static void main(String[] args) 
+	{
+		//Teacher t1; // object declare
+		Teacher t1 = new Teacher();
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Input name = ");
+		t1.name = input.nextLine();
+		
+		System.out.print("Input id = ");
+		t1.id = input.nextInt();
+		
+		System.out.println("Welcome "+t1.name);
+		System.out.println("Your id is = "+t1.id);
+	}
+}
