@@ -1,0 +1,38 @@
+//book.java
+package First;
+public class book
+{
+	String name;
+	int page;
+	void get(String n, int p)
+	{
+		name = n;
+		page = p;
+	}
+	
+	void display()
+	{
+		System.out.println("Available "+name);
+		System.out.println("Total page "+page);
+	}
+}
+
+
+
+
+//info.java
+//parameterized method in a class
+package First;
+
+public class info {
+
+	public static void main(String[] args)
+	{
+		book b = new book(), c = new book() ;
+		b.get("Introduction to Algorithm",1016);
+		c.get("Programming Contest", 300);
+		
+		b.display();
+		c.display();
+	}
+}
