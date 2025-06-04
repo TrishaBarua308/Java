@@ -1,0 +1,41 @@
+//item class
+package First;
+
+public class item 
+{
+	String name;
+	int price;
+	
+	item(String n, int p)
+	{
+		name = n;
+		price = p;
+	}
+	
+	void display()
+	{
+		System.out.println("Name = "+name);
+		System.out.println("Price = "+price);
+		System.out.println();
+	}
+}
+
+
+
+
+
+//parameterized constructor
+
+package First;
+
+public class Parameterized_Constructor 
+{
+	public static void main(String[] args) 
+	{
+		item i1 = new item("Algorithm",1016);
+		i1.display();
+		item i2 = new item("OOP", 2000);
+		i2.display();
+		
+	}
+}
