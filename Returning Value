@@ -1,0 +1,28 @@
+//Square class
+package First;
+
+public class square 
+{
+	int square_value(int value)
+	{
+		return value*value;
+	}
+}
+
+
+
+
+//returning value.java
+package First;
+
+public class returningValue 
+{
+	public static void main(String[] args)
+	{
+		square s1 = new square();
+		System.out.println("Square of  8 = "+s1.square_value(8) );
+		
+		square s2 = new square();
+		System.out.println("Square of  9 = "+s2.square_value(9) );
+	}
+}
