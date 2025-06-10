@@ -1,0 +1,14 @@
+//online compiler
+
+lass Main 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Welcome "+university.name);
+    }
+}
+
+class university
+{
+    static String name = "NUB";
+}
