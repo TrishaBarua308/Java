@@ -1,0 +1,23 @@
+class Main
+{
+    public static void main(String[] args)
+    {
+        hlw h = new hlw();
+        h.display();
+        
+        hlw.dis();
+    }
+}
+
+class hlw
+{
+    void display()
+    {
+        System.out.println("Non static variable");
+    }
+    
+    static void dis()
+    {
+        System.out.println("static variable");
+    }
+}
