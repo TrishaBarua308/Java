@@ -1,0 +1,40 @@
+package First;
+
+public class Box_volume
+{
+	public static void main(String[] args)
+	{
+		Box a = new Box(10,10,10);
+		a.displayVol();
+		Box b = new Box(20,30,10);
+		b.displayVol();
+	}
+}
+
+
+
+
+//
+//
+//
+//
+//
+package First;
+
+public class Box
+{
+	double height, width, depth;
+	
+	Box(double h, double w, double d)
+	{
+		height = h;
+		width = w;
+		depth = d;
+	}
+	
+	void displayVol()
+	{
+		System.out.println("Volume = "+(height*width*depth));
+		System.out.println();
+	}
+}
