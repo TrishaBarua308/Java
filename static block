@@ -1,0 +1,33 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
+        staticBlock.display();
+    }
+}
+
+public class staticBlock
+{
+    static int i;
+    static String name ;
+    
+    static
+    {
+        i = 1016;
+        name = "Trisha";
+    }
+    
+    static void display()
+    {
+        System.out.println(name);
+        System.out.println(i);
+    }
+}
+
+
+
+
+
+
+
+
