@@ -1,0 +1,55 @@
+package First;
+
+public class person
+{
+	private String name;
+	private int id;
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public void setID(int id) // must be same name as same as class
+	{
+		this.id = id;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public int getID()
+	{
+		return id;
+	}
+	
+	/*void show()
+	{
+		System.out.println("Name =  "+name);
+		System.out.println("ID =  "+id);
+	}*/
+		
+}
+
+
+
+
+
+
+
+
+package First;
+
+public class EncapsulationTest
+{
+	public static void main(String[] args) 
+	{
+		person p = new person();
+		p.setName("Trisha");
+		p.setID(1016);
+		
+		System.out.println(p.getName() );
+		System.out.println(p.getID() );
+	}
+}
