@@ -1,0 +1,36 @@
+package First;
+
+public class person
+{
+	public String name;
+	public int id;
+	
+	void show()
+	{
+		System.out.println("Name =  "+name);
+		System.out.println("ID =  "+id);
+	}
+}
+
+
+
+
+
+
+
+
+
+package First;
+
+public class EncapsulationTest
+{
+	public static void main(String[] args) 
+	{
+		person p = new person();
+		p.name = "Trisha";
+		p.id= 16;
+		
+		p.show();
+		
+	}
+}
