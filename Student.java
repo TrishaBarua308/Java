@@ -1,22 +1,13 @@
-package First;
-import java.util.Scanner;
-public class Student 
-{
-	String name;
-	int id;
+package inheritance;
+
+public class Student extends Person
+{	
+	//name, id, display()
+	String dept;
 	
-	Scanner input = new Scanner(System.in);
-	
-	void get()
+	void show()
 	{
-		System.out.print("Input  name = ");
-		name = input.nextLine();
-		System.out.print("Input ID = ");
-		id = input.nextInt();
-	}
-	void display()
-	{
-		System.out.println("Name = "+name);
-		System.out.println("ID = "+id);
+		display();
+		System.out.println("Department = "+dept);
 	}
 }
