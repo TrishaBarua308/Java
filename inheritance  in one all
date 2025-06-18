@@ -1,0 +1,44 @@
+class Main
+{
+    public static void main(String[] args)
+    {
+        student s1 = new student() ;
+        
+        s1.name = "Trisha";
+        s1.id = 1016;
+        s1.dept = "CSE";
+        
+        s1.show();
+    }
+}
+
+
+class person
+{
+    String name;
+    int id;
+    
+    void display()
+    {
+        System.out.println("Name       = "+name);
+        System.out.println("ID         = "+id);
+    }
+}
+
+
+class student extends person
+{
+    String dept;
+    
+    void show()
+    {
+        display();
+        System.out.println("Department = "+dept);
+        System.out.println();
+    }
+}
+
+
+
+
+
