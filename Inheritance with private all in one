@@ -1,0 +1,102 @@
+package inheritancePrivate;
+
+public class Student 
+{
+	private String name;
+	private int id;
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setId(int id)
+	{
+		this.id = id;
+	}
+	public String getId()
+	{
+		return id ;
+	}
+	
+	
+	void display()
+	{
+		System.out.println("Name = "+name);
+		System.out.println("ID = "+id);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+package inheritancePrivate;
+
+public class Selected extends Student
+{
+	//getname,setname, display()
+	
+	private String dept;
+	
+	public void setDept(String dept)
+	{
+		this.dept = dept;
+	}
+	
+	public String getDept()
+	{
+		return dept;
+	}
+	
+	void displayMore()
+	{
+		display();
+		System.out.println("Department = "+dept);
+		System.out.println();
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+package inheritancePrivate;
+
+public class Test extends Selected
+{
+	public static void main(String[] args) 
+	{
+		Test t1 = new Test();
+		t1.setName("Trisha");
+		t1.setId(1016);
+		t1.setDept("BSc in CSE");
+		
+		t1.displayMore();
+		
+		
+		Test t2 = new Test();
+		t2.setName("Mitu");
+		t2.setId(16);
+		t2.setDept("MSc in CSE");
+		
+		t2.displayMore();
+		
+	}
+}
