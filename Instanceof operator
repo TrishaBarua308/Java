@@ -1,0 +1,47 @@
+package First;
+
+public class AI extends ML
+{
+	
+}
+
+
+
+package First;
+
+public class ML extends DL
+{
+	
+}
+
+
+
+package First;
+
+public class DL extends Checking
+{
+	
+}
+
+
+
+package First;
+
+public class Checking
+{
+	public static void main(String[] args)
+	{
+		AI a = new AI();
+		ML m = new ML();
+		DL d = new DL();
+		
+		System.out.println(a instanceof AI);
+		System.out.println(m instanceof ML);
+		System.out.println(d instanceof DL);
+		System.out.println(a instanceof DL);
+		System.out.println(a instanceof ML);
+		System.out.println(m instanceof DL);
+		System.out.println(d instanceof AI); // false
+		System.out.println(m instanceof AI); // false
+	}
+}
