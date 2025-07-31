@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        MyBook newNovel = new MyBook();
+        newNovel.setTitle(s);
+        System.out.println("The title is: "+newNovel.getTitle());
+        
+    }    
+}
+
+abstract class Book
+{
+    String title;
+    abstract void setTitle(String s);
+    String getTitle()
+    {
+        return title;
+    }
+}
+class MyBook extends Book
+{
+    void setTitle(String s)
+    {
+        title = s;
+    }
+}
+
+
+
