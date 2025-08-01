@@ -1,0 +1,31 @@
+class Main {  
+
+    static class Car {
+        String color;
+        String model;
+        int year;
+
+        Car(String color, String model, int year) {
+            this.color = color;
+            this.model = model;
+            this.year = year;
+        }
+
+        void turnEngineOn() {
+            System.out.println("engine is on");            
+        }
+
+        // Create the calculateMPG method 
+        
+int calculateMPG(int milesDriven, int gallonsUsed) {
+    return milesDriven / gallonsUsed;
+}
+    }
+    
+    public static void main(String[] args) {
+        Car myCar = new Car("red", "camry", 2022);
+        // Print out value for when calculateMPG is used 
+        System.out.println(myCar.calculateMPG(180, 20));
+    }
+    
+}
