@@ -1,0 +1,37 @@
+package Java_Package;
+
+public class Practice
+{
+    public static void main(String[] arg)
+    {
+        Person p1 = new Person();
+        p1.name = "Trisha";
+        p1.id = 1016;
+        p1.dept = "CSE";
+        p1.display2();
+    }
+}
+
+// Parent
+ class Student
+{
+    String name;
+    int id;
+
+    void display()
+    {
+        System.out.println("Name = "+name);
+        System.out.println("ID       = "+id);
+    }
+}
+
+ class Person extends Student
+{
+    String dept;
+
+    void display2()
+    {
+        display();
+        System.out.println("Dept.  = "+dept);
+    }
+}
