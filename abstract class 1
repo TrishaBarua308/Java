@@ -1,0 +1,53 @@
+package abstract_class_method;
+
+abstract class MobileUser
+{
+	abstract void message();
+}
+
+
+
+package abstract_class_method;
+
+ class Trisha extends MobileUser
+{
+	@Override
+	void message()
+	{
+		System.out.println("I am Trisha");
+	}
+}
+
+
+
+
+package abstract_class_method;
+
+  class Mitu extends MobileUser
+{
+	@Override
+	void message()
+	{
+		System.out.println("I am Mitu");
+	}
+}
+
+
+
+
+
+package abstract_class_method;
+
+public class Test
+{
+	public static void main(String[] args)
+	{
+		MobileUser mu; // cannot create obj, only reference value
+		
+		mu = new Trisha();
+		mu.message();
+		
+		mu= new Mitu();
+		mu.message();
+	}
+}
