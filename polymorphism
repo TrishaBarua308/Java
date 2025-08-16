@@ -1,0 +1,62 @@
+package polymorphism;
+
+public class Person 
+{
+	void display()
+	{
+		System.out.println("I am a person class");
+	}
+}
+
+
+
+
+
+package polymorphism;
+
+public class Student extends Person
+{
+	@Override
+	void display()
+	{
+		System.out.println("I am a Student class");
+	}
+}
+
+
+
+
+
+
+package polymorphism;
+
+public class Teacher extends Student
+{
+	@Override
+	void display()
+	{
+		System.out.println("I am a Teacher class");
+	}
+}
+
+
+
+
+
+
+package polymorphism;
+
+public class Test
+{
+	public static void main(String[] args)
+	{
+		Person p = new Person();
+		Student s = new Student();
+		Teacher t = new Teacher();
+		
+		p.display();
+		s.display();
+		t.display();
+	}
+}
+
