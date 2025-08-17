@@ -1,0 +1,30 @@
+package interface_demo;
+
+public interface Animal  // by default abstract
+{
+	void eat(); // public abstract void eat(); 
+}
+
+
+package interface_demo;
+
+public class Dog implements Animal
+{
+	public void eat()
+	{
+		System.out.println("Dogs are very cute.");
+	}
+}
+
+
+package interface_demo;
+
+public class Test 
+{
+	public static void main(String[] args)
+	{
+		Dog d = new Dog();
+		d.eat();
+	}
+}
+
