@@ -1,0 +1,34 @@
+package interface_multi_inheritance;
+
+public interface A
+{
+	void eat();
+}
+
+
+public interface B
+{
+	void eat();
+}
+
+
+public class C implements A,B
+{
+	public void eat()
+	{
+		System.out.println("I am eating");
+	}
+}
+
+
+public class Test
+{
+	public static void main(String[] args)
+	{
+		C obj = new C();
+		obj.eat();
+	}
+}
+
+
+
