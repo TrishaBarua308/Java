@@ -1,0 +1,90 @@
+package Practice;
+import java.util.*;
+
+public class solution2
+{
+   public static void main(String[] args)
+   {
+       Scanner input = new Scanner(System.in);
+       int n;
+       System.out.print("How many employee = ");
+       n = input.nextInt();
+       input.nextLine();
+
+       Employee[] employeeArray = new Employee[n];
+
+       for(int i=0; i<n; i++)
+       {
+           System.out.println("Employee "+(i+1));
+           System.out.print("Name = ");
+           String name = input.nextLine();
+
+           System.out.print("Salary = ");
+           double salary = input.nextDouble();
+           input.nextLine();
+
+           System.out.print("Type for Manager(0)/ Developer(1) = ");
+           int type = input.nextInt();
+
+           if(type==0)
+           {
+               employeeArray[i] = new Manager(name, salary);
+           }
+           else
+           {
+               employeeArray[i] = new Developer(name, salary);
+           }
+
+           input.nextLine();
+       }
+
+       System.out.println("All employee list");
+       for(Employee e : employeeArray)
+       {
+           e.display();
+           e.calculateBonus();
+       }
+   }
+}
+
+abstract class Employee
+{
+    protected String name;
+    protected double salary;
+
+    abstract void calculateBonus();
+
+    void display()
+    {
+        System.out.println("Name= "+name);
+        System.out.println("Salary= "+salary);
+    }
+}
+
+class Manager extends Employee
+{
+    Manager(String name, double salary)
+    {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    void calculateBonus()
+    {
+        System.out.println("Bonus = "+salary*(0.2));
+    }
+}
+
+class Developer extends Employee
+{
+    Developer(String name, double salary)
+    {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    void calculateBonus()
+    {
+        System.out.println("Bonus = "+salary*(0.1));
+    }
+}
