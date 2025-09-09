@@ -1,0 +1,96 @@
+//Student Management System
+
+package Practice;
+import java.util.Scanner;
+
+public class lab_practice
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("How many student: ");
+        int n;
+        n=input.nextInt();
+        input.nextLine();// buf
+        Student[] studentArray = new Student[n];
+
+        for(int i=0; i<n; i++)
+        {
+            System.out.println("Student "+(i+1)+" info: ");
+            System.out.print("Name = ");
+            String name = input.nextLine();
+
+            System.out.print("ID = ");
+            int id = input.nextInt();
+
+            double grade;
+
+            try
+            {
+                System.out.print("Grade = ");
+                grade = input.nextDouble();
+            }
+            catch (Exception e)
+            {
+                System.out.println("Exception = "+e);
+                System.out.print("Grade = ");
+                grade = input.nextDouble();
+            }
+
+            input.nextLine();
+
+            studentArray[i] = new Student(name, id, grade);
+        }
+
+        System.out.println("All student list ");
+        for(Student s : studentArray)
+        {
+            s.display();
+            System.out.println("Passed = "+s.is_passed());
+
+            System.out.println();
+        }
+
+
+
+
+        /* Student s1, s2;
+        s1 = new Student("Trisha",1016, 50);
+        s2 = new Student("Mitu",560,30);
+        s1.display();
+        System.out.println("Passed = "+s1.is_passed());
+        s2.display();
+        System.out.println("Passed = "+s2.is_passed());
+
+         */
+
+    }
+}
+
+class Student
+{
+    private String name;
+    private int id;
+    private double grade;
+
+    public Student(String name, int id, double grade)
+    {
+        this.name = name;
+        this.id = id;
+        this.grade  = grade;
+    }
+
+    boolean is_passed()
+    {
+        if(grade>=40) return true;
+        else return false;
+    }
+
+    public void display()
+    {
+        System.out.println("Name = "+name+" | ID = "+id+" | Grade = "+grade);
+    }
+
+
+}
