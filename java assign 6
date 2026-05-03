@@ -1,0 +1,44 @@
+package Java_assignment_6;
+
+class Ani
+{
+    void sleep()
+    {
+        System.out.println("animal sleep");
+    }
+}
+
+class Bird extends  Ani
+{
+    void fly()
+    {
+        System.out.println("bird fly");
+    }
+
+
+}
+
+class Horse extends  Ani
+{
+    @Override
+    void sleep()
+    {
+        System.out.println("Horse sleep");
+    }
+}
+
+public class TestOverridding
+{
+    public static void main(String[] args)
+    {
+        Ani a = new Bird();
+        a.sleep(); // sleep() method of animal class will be executed
+        //a.fly();
+        ((Bird)a).fly();
+
+        Ani h = new Horse();
+        h.sleep(); // sleep() method of Horse class will be executed
+    }
+
+}
+
