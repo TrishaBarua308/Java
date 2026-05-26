@@ -1,23 +1,18 @@
-package inheritancePrivate;
+package abstract_class_method;
 
-public class Test extends Selected
+public class Test
 {
-	public static void main(String[] args) 
-	{
-		Test t1 = new Test();
-		t1.setName("Trisha");
-		t1.setId(1016);
-		t1.setDept("BSc in CSE");
-		
-		t1.displayMore();
-		
-		
-		Test t2 = new Test();
-		t2.setName("Mitu");
-		t2.setId(16);
-		t2.setDept("MSc in CSE");
-		
-		t2.displayMore();
-		
-	}
+    public static void main(String[] args)
+    {
+        Shape s;
+
+        s = new Rectangle(10,20);
+        s.area();
+
+        s = new Circle(10);
+        s.area();
+
+        s = new Triangle(10,20);
+        s.area();
+    }
 }
